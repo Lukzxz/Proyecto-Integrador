@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Tienda</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Tienda Deportiva</h1>
+			<input type="text" id="search-input" placeholder="Buscar productos..." />
+
+			<div class="container-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="icon-cart"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+					/>
+				</svg>
+				<div class="count-products">
+					<span id="contador-productos">0</span>
+				</div>
+
+				<div class="container-cart-products hidden-cart">
+					<div class="cart-product">
+						<div class="info-cart-product">
+                        </div>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="icon-close"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M6 18L18 6M6 6l12 12"
+							/>
+						</svg>
+					</div>
+                    <div class="cart-total">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">$0</span>
+                    </div>
+				</div>
+			</div>
+		</header>
+		<div class="container-items">
+			<div class="item">
+				<figure>
+					<img
+						src="https://images.unsplash.com/photo-1621315271772-28b1f3a5df87?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Zapatillas</h2>
+					<p class="price">$80</p>
+					<button class="add-to-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Auriculares Inalámbricos</h2>
+					<p class="price">$20</p>
+					<button class="add-to-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://images.unsplash.com/photo-1523394643039-a2770cf4a2a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Smartwatch</h2>
+					<p class="price">$50</p>
+					<button class="add-to-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://images.unsplash.com/photo-1638798486151-f5247b3c7261?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Apple Watch</h2>
+					<p class="price">$90</p>
+					<button class="add-to-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://images.unsplash.com/photo-1559348349-86f1f65817fe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Bicicleta de Carretera</h2>
+					<p class="price">$3000</p>
+					<button class="add-to-cart">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+
+        <script src="index.js"></script>
+	</body>
+	<footer>
+		<div class="add-product-container">
+			<h2>Agregar Nuevo Producto</h2>
+			<form id="add-product-form">
+				<label for="product-name">Nombre del producto:</label>
+				<input type="text" id="product-name" placeholder="Ingrese el nombre del producto" required>
+	
+				<label for="product-price">Precio del producto:</label>
+				<input type="number" id="product-price" placeholder="Ingrese el precio del producto" required>
+	
+				<label for="product-image">URL de la imagen:</label>
+				<input type="url" id="product-image" placeholder="Ingrese la URL de la imagen del producto" required>
+	
+				<button type="submit">Agregar producto</button>
+			</form>
+		</div>
+	</footer>
+	
+</html>
