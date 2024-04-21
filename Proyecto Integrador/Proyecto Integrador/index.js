@@ -32,15 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             const productContainer = button.closest(".item");
             const productName = productContainer.querySelector("h2").textContent;
-            const productPrice = parseFloat(productContainer.querySelector(".price").textContent.slice(1)); // Elimina el signo "$" y convierte el precio a número
+            const productPrice = parseFloat(productContainer.querySelector(".price").textContent.slice(1));
             const cartTotalElement = document.querySelector(".total-pagar");
-            const currentTotal = parseFloat(cartTotalElement.textContent.slice(1)); // Obtén el total actual del carrito
-            const newTotal = currentTotal + productPrice; // Calcula el nuevo total sumando el precio del producto
+            const currentTotal = parseFloat(cartTotalElement.textContent.slice(1));
+            const newTotal = currentTotal + productPrice;
 
-            // Actualiza el total en el carrito
             cartTotalElement.textContent = `$${newTotal}`;
 
-            // Crea un nuevo elemento en el carrito para mostrar el producto añadido
             const cartProduct = document.createElement("div");
             cartProduct.classList.add("cart-product");
             cartProduct.innerHTML = `
@@ -106,10 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             products.push(newProduct);
 
-            // Limpiar el formulario
             addProductForm.reset();
 
-            // Volver a renderizar los productos
             renderProducts();
         } else {
             alert("Por favor, completa todos los campos del formulario.");
